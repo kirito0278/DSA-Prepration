@@ -64,10 +64,25 @@ int main(){
     cin>>marks;
     if (marks>=90){         // IF CONDITION GET FALSE THEN IF BLOCK WILL NOT EXECUTE AND THERE WILL BE NO OUTPUT IF THERE IS NO ELSE BLOCK // ELSE STATMENT IS OPTIONAL , AND {} ARE ALSO OPTIONAL FOR SINGLE STATEMENT 
         cout<<"A"<<endl; // SINGLE STATEMENT IN IF BLOCK
-    }else if(marks<90 && marks>=80){// [90>marks>=80] THIS STATEMENT WILL NOT WORK BCZ C++ EVALUATES EXPRESSIONS FROM LEFT TO RIGHT THEN [90>MARKS -> 90> 85(INPUT)->TRUE->1 THEN 1>=80 -> FALSE-> 0 ELSE IF WILL NOT EXECUTE]
+    }else if(marks<90 && marks>=80){// [90>marks>=80] THIS STATEMENT WILL NOT WORK BCZ C++ (VALID IN PYTHON) EVALUATES EXPRESSIONS FROM LEFT TO RIGHT THEN [90>MARKS -> 90> 85(INPUT)->TRUE->1 THEN 1>=80 -> FALSE-> 0 ELSE IF WILL NOT EXECUTE]
         cout<<"B"<<endl; // SINGLE STATEMENT IN ELSE BLOCK
     }else{
         cout<<"C"<<endl;
     }
+
+
+    //TERNARY STATEMENT   SYNTAX--> CONDITION?STATEMENT1:STAEMENT2;  IF CONDITION TRUE THEN STAEMENT 1 WILL EXECUTE OTHERWISE STATEMENT 2
+    cout<<(marks>=85?"good":"bad")<<endl;
+
+
+    //LOOPS --> WHILE FOR DO-WHILE
+    //WHILE LOOP EXAMPLE
+    int count=1;
+    while (count<=5)
+    {
+        cout<<count<<" ";
+        count++;
+    }
+    
     return 0;
 }
