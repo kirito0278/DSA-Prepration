@@ -33,6 +33,7 @@ int main(){
     int newPrice = (int)price;
     cout<<endl<<newPrice<<endl;
 
+
     //INPUT IN C++
     int age1; //[LOCAL VARIABLE] IT IS DECLARED BUT NOT INITIALIZED THAT'S WHY IF WE TRY TO PRINT AGE1 ,IT WILL GIVE GARBAGE VALUE
     // [EXCEPTION]GLOBALLY DECLARED VARIABLE GIVE OUTPUT 0
@@ -51,8 +52,22 @@ int main(){
 
     //LOGICAL [||(OR) && (AND) !(NOT)] OUTPUT-> true or false
 
-    //UNARY OPERATORS
-    // INCREMENT[++] DECREMENT[--]
+    //UNARY OPERATORS [++,--]
+    // POST & PRE INCREMENT DECREMENT
     //E.G. a++ =a+1 POST INCREMENT
+
+
+    // CONDITIONAL STATEMENTS
+    //IF ELSE-IF  ELSE
+    int marks;
+    cout<<"enter your marks: ";
+    cin>>marks;
+    if (marks>=90){         // IF CONDITION GET FALSE THEN IF BLOCK WILL NOT EXECUTE AND THERE WILL BE NO OUTPUT IF THERE IS NO ELSE BLOCK // ELSE STATMENT IS OPTIONAL , AND {} ARE ALSO OPTIONAL FOR SINGLE STATEMENT 
+        cout<<"A"<<endl; // SINGLE STATEMENT IN IF BLOCK
+    }else if(marks<90 && marks>=80){// [90>marks>=80] THIS STATEMENT WILL NOT WORK BCZ C++ EVALUATES EXPRESSIONS FROM LEFT TO RIGHT THEN [90>MARKS -> 90> 85(INPUT)->TRUE->1 THEN 1>=80 -> FALSE-> 0 ELSE IF WILL NOT EXECUTE]
+        cout<<"B"<<endl; // SINGLE STATEMENT IN ELSE BLOCK
+    }else{
+        cout<<"C"<<endl;
+    }
     return 0;
 }
