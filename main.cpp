@@ -83,6 +83,6 @@ int main(){
         cout<<count<<" ";
         count++;
     }
-    
+    //NESTED LOOPS--> LOOP INSIDE LOOP
     return 0;
 }
