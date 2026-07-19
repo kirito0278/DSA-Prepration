@@ -2,6 +2,16 @@
 #include <iostream>  //PREPROCESSOR DIRECTIVE // COUT LOGIC WRITTEN IN IT
 using namespace std;
 
+//FUNCTION DEFINTION
+int printHello(){
+    cout<<"hello\n";
+    return 3; //IT IS CALLED FINAL STATEMENT OF FUNCTION AFTER THIS NOTHING WILL WORK
+}
+
+int sum(int a,int b){   // a,b ARE PARAMETERS WHERE VALUES ARE GIVEN AS INPUT
+    return a+b;
+}
+
 int main(){
     // OUTPUT IN C++
     cout<<"hello world"<<endl;
@@ -70,6 +80,7 @@ int main(){
         cout<<"C"<<endl;
     }
 
+    // SWITCH CASE [LEARN IT ONLINE]
 
     //TERNARY STATEMENT   SYNTAX--> CONDITION?STATEMENT1:STAEMENT2;  IF CONDITION TRUE THEN STAEMENT 1 WILL EXECUTE OTHERWISE STATEMENT 2
     cout<<(marks>=85?"good":"bad")<<endl;
@@ -84,5 +95,54 @@ int main(){
         count++;
     }
     //NESTED LOOPS--> LOOP INSIDE LOOP
+
+
+    //FUNCTION CALL/INVOKE
+    cout << printHello()<<endl; //WE CAN DIRECTLY PRINT FUNCTION LIKE THIS OR SAVE IT IN ANY VARIABLE
+    int x=3,g=4;
+    cout<<sum(x,g)<<endl; //ARGUMENTS
+    //THERE R TWO WAYS OF PASSING ARGUMENTS
+    //--PASS BY VALUE [COPY OF ARGUMENT IS PASS TO FUNCTION] E.G. SUM FUNCTION CREATED ABOVE
+    //PASS BY REFERENCE [SHARE ADDRESS DIRECTLY]
+
+    //BINARY NO.S -- TO STORE -VE DEC NO. IN BIN WE FIND  ITS 2'S COMPLIMENT
+    //TO CONVERT -VE BIN TO DEC WE DO 2'S COMPLIIMENT
+
+
+    //BITWISE OPERATORS
+    //BITWISE & [0&0 ,0&1,1&0-->0; 1&1-->1]
+    int f=4,d=8;
+    cout<<(f&d)<<endl;
+    //BITWISE | [0&0-->0; 0&1,1&0,1&1-->1]
+    cout<<(f|d)<<endl;
+    //BITWISE ^ (XOR-exclusive or) [same bits-->0;diff bits-->1]
+    cout<<(f^d)<<endl;
+
+
+    //BITWISE << (LEFT SHIFT) [n(num that should be shifted)<<1(how many steps shoulld be shifted)]
+    cout<<(f<<1)<<endl;
+    //NOTE--> WHEN WE R USING A<<B (INTERNALLY IT IS ANS=A*pow(2,B))
+
+
+    //BITWISE >> (RIGHT SHIFT) [n(num that should be shifted)>>1(how many steps shoulld be shifted)]
+    cout<<(d>>1)<<endl;
+    //NOTE--> WHEN WE R USING A>>B (INTERNALLY IT IS ANS=A/pow(2,B))
+
+
+    //OPERATOR PRECEDENCE
+    // !,+,-(UNARY)     FIRST R TO L
+    // *,/,%            SECOND L TO R
+    // +,-              THIRD L TO R
+    // <,>,<=,>=        FOURTH L TO R
+    // ==,!=            FIFTH L TO R
+    // &&               SIXTH L TO R
+    // ||               SEVENTH L TO R
+    // =                EIGTH  R TO L  [BITWISE COME SOMEWHERE BETWEEN 3RD AND 4TH]
+
+
+    //SCOPE OF VARIABLES-- LOCAL & GLOBAL
+
+    //DATA TYPE MODIFIERS [CHANGE MEANING OF DATA TYPES]
+    //-- long, short, long long, signed, unsigned
     return 0;
 }
